@@ -1383,8 +1383,8 @@ input  { font-family: inherit; }
   let currentPhase = 0, timerSeconds = DURATIONS[0];
   let timerInterval = null, timerRunning = false;
 
-  function showScreen(id) {
-    ['screen-landing','screen-ghid','screen-activitate'].forEach(s => {
+function showScreen(id) {
+    ['screen-landing','screen-ghid','screen-activitate','screen-teorie'].forEach(s => {
       document.getElementById(s).hidden = (s !== id);
     });
     if (typeof feather !== 'undefined') feather.replace();
