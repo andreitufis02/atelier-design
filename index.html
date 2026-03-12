@@ -465,6 +465,55 @@ input  { font-family: inherit; }
 }
 .teorie-cta:hover { background: var(--gold-l); transform: translateY(-2px); }
 
+/* SCHEME */
+.schema-card { background: var(--bg2); border: 1px solid var(--bdr); border-radius: var(--r); padding: 20px; margin-bottom: 16px; }
+.schema-title { font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+.schema-name { font-family: var(--font-d); font-size: 20px; font-weight: 700; margin-bottom: 16px; line-height: 1.2; }
+.gagne-flow { display: flex; flex-direction: column; gap: 4px; }
+.gf-row { display: grid; grid-template-columns: 32px 1fr auto; gap: 8px; align-items: center; padding: 7px 10px; border-radius: 5px; background: var(--bg3); border: 1px solid var(--bdr); }
+.gf-row.ob { border-color: var(--gold-bdr); background: var(--gold-dim); }
+.gf-num { font-family: var(--font-d); font-size: 17px; font-weight: 700; color: var(--muted); text-align: center; }
+.gf-row.ob .gf-num { color: var(--gold); }
+.gf-label { font-size: 12.5px; font-weight: 500; color: rgba(240,244,255,0.6); }
+.gf-row.ob .gf-label { color: var(--white); }
+.gf-badge { font-size: 8px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 2px 7px; border-radius: 10px; background: var(--gold); color: #0a0f1e; white-space: nowrap; }
+.gagne-legend { display: flex; gap: 14px; margin-top: 10px; flex-wrap: wrap; }
+.gl-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--muted); }
+.gl-dot { width: 10px; height: 10px; border-radius: 2px; }
+.gl-dot.ob { background: var(--gold); }
+.gl-dot.opt { background: var(--bg3); border: 1px solid var(--bdr2); }
+.samr-stair { display: flex; flex-direction: column-reverse; gap: 4px; }
+.ss-row { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 5px; border: 1px solid var(--bdr); }
+.ss-row.transf { background: rgba(201,168,76,0.10); border-color: var(--gold-bdr); }
+.ss-row.enhanc { background: var(--bg3); border-color: var(--bdr2); }
+.ss-letter { font-family: var(--font-d); font-size: 28px; font-weight: 700; min-width: 32px; line-height: 1; text-align: center; }
+.ss-row.transf .ss-letter { color: var(--gold); }
+.ss-row.enhanc .ss-letter { color: var(--muted); }
+.ss-content { flex: 1; }
+.ss-name { font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+.ss-row.transf .ss-name { color: var(--white); }
+.ss-row.enhanc .ss-name { color: rgba(240,244,255,0.55); }
+.ss-desc { font-size: 11.5px; color: var(--muted); font-weight: 300; line-height: 1.4; }
+.ss-zone { font-size: 8px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 8px; border-radius: 3px; white-space: nowrap; align-self: flex-start; }
+.ss-zone.t { background: var(--gold); color: #0a0f1e; }
+.ss-zone.e { background: var(--bg3); border: 1px solid var(--bdr2); color: var(--muted); }
+.samr-dir { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; text-align: right; padding-right: 4px; }
+.picrat-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.picrat-matrix { width: 100%; border-collapse: collapse; min-width: 300px; }
+.picrat-matrix th, .picrat-matrix td { border: 1px solid var(--bdr2); padding: 9px 7px; text-align: center; font-size: 11.5px; }
+.picrat-matrix th { font-size: 9.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--bg3); color: var(--muted); }
+.picrat-matrix .ax { color: var(--white); font-weight: 600; background: rgba(13,33,69,0.6); font-size: 10px; }
+.pm-cell { background: var(--bg3); color: rgba(240,244,255,0.45); line-height: 1.5; }
+.pm-cell.mid { background: var(--gold-dim); border-color: var(--gold-bdr); color: rgba(240,244,255,0.75); }
+.pm-cell.tgt { background: rgba(201,168,76,0.22); border-color: var(--gold); color: var(--gold-l); font-weight: 700; }
+.picrat-legend { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 10px; }
+.pl-item { font-size: 11px; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+.pl-box { width: 12px; height: 12px; border-radius: 2px; flex-shrink: 0; }
+.svg-wrap { display: flex; justify-content: center; padding: 8px 0 4px; }
+.svg-wrap svg { max-width: 100%; height: auto; }
+.e6-legend { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 10px; }
+.e6-item { font-size: 11px; color: var(--muted); padding: 6px 10px; background: var(--bg3); border-radius: 4px; border: 1px solid var(--bdr); }
+.e6-item span { color: var(--gold); font-weight: 600; }
   
 </style>
 </head>
@@ -811,11 +860,12 @@ input  { font-family: inherit; }
   </nav>
 
   <div style="padding: 16px 24px 0; max-width: 680px; margin: 0 auto; width: 100%;">
-    <div class="teorie-tabs">
-      <button class="teorie-tab active" onclick="switchTeorieTab('modele', this)">Modele</button>
-      <button class="teorie-tab" onclick="switchTeorieTab('context', this)">Context</button>
-      <button class="teorie-tab" onclick="switchTeorieTab('faq', this)">FAQ</button>
-    </div>
+<div class="teorie-tabs">
+  <button class="teorie-tab active" onclick="switchTeorieTab('modele', this)">Modele</button>
+  <button class="teorie-tab" onclick="switchTeorieTab('context', this)">Context</button>
+  <button class="teorie-tab" onclick="switchTeorieTab('faq', this)">FAQ</button>
+  <button class="teorie-tab" onclick="switchTeorieTab('scheme', this)">Scheme</button>
+</div>
   </div>
 
   <div class="teorie-scroll">
@@ -1117,7 +1167,232 @@ input  { font-family: inherit; }
           Intră în atelier
         </button>
       </div>
+<!-- TAB: SCHEME -->
+<div id="tab-scheme" hidden>
 
+  <!-- GAGNÉ -->
+  <div class="schema-card">
+    <p class="schema-title">Gagné adaptat · Ilie, 2014</p>
+    <p class="schema-name">Cele 11 evenimente de instruire</p>
+    <div class="gagne-flow">
+      <div class="gf-row ob"><span class="gf-num">1</span><span class="gf-label">Organizarea mediului</span><span class="gf-badge">Obligatoriu</span></div>
+      <div class="gf-row ob"><span class="gf-num">2</span><span class="gf-label">Captarea atenției</span><span class="gf-badge">Obligatoriu</span></div>
+      <div class="gf-row ob"><span class="gf-num">3</span><span class="gf-label">Anunțarea obiectivelor</span><span class="gf-badge">Obligatoriu</span></div>
+      <div class="gf-row"><span class="gf-num">4</span><span class="gf-label">Reactualizarea cunoștințelor anterioare</span></div>
+      <div class="gf-row"><span class="gf-num">5</span><span class="gf-label">Prezentarea conținutului</span></div>
+      <div class="gf-row"><span class="gf-num">6</span><span class="gf-label">Dirijarea învățării</span></div>
+      <div class="gf-row"><span class="gf-num">7</span><span class="gf-label">Asigurarea performanței</span></div>
+      <div class="gf-row"><span class="gf-num">8</span><span class="gf-label">Feedback</span></div>
+      <div class="gf-row ob"><span class="gf-num">9</span><span class="gf-label">Evaluare propriu-zisă</span><span class="gf-badge">Obligatoriu</span></div>
+      <div class="gf-row"><span class="gf-num">10</span><span class="gf-label">Intensificarea retenției și transferului</span></div>
+      <div class="gf-row ob"><span class="gf-num">11</span><span class="gf-label">Aprecieri finale și închidere</span><span class="gf-badge">Obligatoriu</span></div>
+    </div>
+    <div class="gagne-legend">
+      <div class="gl-item"><div class="gl-dot ob"></div><span>Obligatoriu — 5 din 11</span></div>
+      <div class="gl-item"><div class="gl-dot opt"></div><span>Adaptabil contextului</span></div>
+    </div>
+  </div>
+
+  <!-- SAMR -->
+  <div class="schema-card">
+    <p class="schema-title">Puentedura · 2012</p>
+    <p class="schema-name">Scala SAMR</p>
+    <p class="samr-dir" style="color:var(--gold);">TRANSFORMARE ↑</p>
+    <div class="samr-stair">
+      <div class="ss-row enhanc">
+        <span class="ss-letter">S</span>
+        <div class="ss-content"><p class="ss-name">Substituție</p><p class="ss-desc">Înlocuire directă fără schimbare funcțională. Ex: creion → tastatură.</p></div>
+        <span class="ss-zone e">Îmbunătățire</span>
+      </div>
+      <div class="ss-row enhanc">
+        <span class="ss-letter">A</span>
+        <div class="ss-content"><p class="ss-name">Augmentare</p><p class="ss-desc">Îmbunătățiri funcționale minore. Sarcina rămâne similară.</p></div>
+        <span class="ss-zone e">Îmbunătățire</span>
+      </div>
+      <div class="ss-row transf">
+        <span class="ss-letter">M</span>
+        <div class="ss-content"><p class="ss-name">Modificare</p><p class="ss-desc">Sarcina este restructurată semnificativ prin tehnologie.</p></div>
+        <span class="ss-zone t">Transformare</span>
+      </div>
+      <div class="ss-row transf">
+        <span class="ss-letter">R</span>
+        <div class="ss-content"><p class="ss-name">Redefinire</p><p class="ss-desc">Sarcini imposibile fără tehnologie. Experiențe complet noi.</p></div>
+        <span class="ss-zone t">Transformare</span>
+      </div>
+    </div>
+    <p class="samr-dir" style="color:var(--muted);margin-top:6px;">↓ ÎMBUNĂTĂȚIRE</p>
+  </div>
+
+  <!-- PIC-RAT -->
+  <div class="schema-card">
+    <p class="schema-title">Kimmons, Graham & West · 2020</p>
+    <p class="schema-name">Matricea PIC-RAT</p>
+    <div class="picrat-wrap">
+      <table class="picrat-matrix">
+        <thead>
+          <tr>
+            <th></th>
+            <th>R — Înlocuire</th>
+            <th>A — Amplificare</th>
+            <th>T — Transformare</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="ax">P — Pasiv</th>
+            <td class="pm-cell">PR<br><span style="font-size:10px;">vizionează + înlocuiește</span></td>
+            <td class="pm-cell">PA<br><span style="font-size:10px;">vizionează + amplifică</span></td>
+            <td class="pm-cell">PT<br><span style="font-size:10px;">vizionează + transformă</span></td>
+          </tr>
+          <tr>
+            <th class="ax">I — Interactiv</th>
+            <td class="pm-cell">IR<br><span style="font-size:10px;">explorează + înlocuiește</span></td>
+            <td class="pm-cell mid">IA<br><span style="font-size:10px;">explorează + amplifică</span></td>
+            <td class="pm-cell">IT<br><span style="font-size:10px;">explorează + transformă</span></td>
+          </tr>
+          <tr>
+            <th class="ax">C — Creativ</th>
+            <td class="pm-cell">CR<br><span style="font-size:10px;">produce + înlocuiește</span></td>
+            <td class="pm-cell">CA<br><span style="font-size:10px;">produce + amplifică</span></td>
+            <td class="pm-cell tgt">CT ★<br><span style="font-size:10px;">produce + transformă</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="picrat-legend">
+      <div class="pl-item"><div class="pl-box" style="background:rgba(224,85,85,0.25);border:1px solid rgba(224,85,85,0.4);"></div><span>Zona inițială tipică: PA</span></div>
+      <div class="pl-item"><div class="pl-box" style="background:var(--gold-dim);border:1px solid var(--gold-bdr);"></div><span>Nivel intermediar: IA</span></div>
+      <div class="pl-item"><div class="pl-box" style="background:rgba(201,168,76,0.22);border:1px solid var(--gold);"></div><span>Zona-țintă: CT</span></div>
+    </div>
+  </div>
+
+  <!-- TPACK -->
+  <div class="schema-card">
+    <p class="schema-title">Mishra & Koehler · 2006</p>
+    <p class="schema-name">Modelul TPACK</p>
+    <div class="svg-wrap">
+      <svg viewBox="0 0 400 310" xmlns="http://www.w3.org/2000/svg" style="max-width:400px;width:100%;">
+        <circle cx="160" cy="125" r="95" fill="rgba(13,33,69,0.65)" stroke="rgba(201,168,76,0.35)" stroke-width="1.5"/>
+        <circle cx="240" cy="125" r="95" fill="rgba(13,33,69,0.65)" stroke="rgba(201,168,76,0.35)" stroke-width="1.5"/>
+        <circle cx="200" cy="200" r="95" fill="rgba(13,33,69,0.65)" stroke="rgba(201,168,76,0.35)" stroke-width="1.5"/>
+        <text x="112" y="82" text-anchor="middle" fill="#f0f4ff" font-size="14" font-weight="700" font-family="DM Sans,sans-serif">CK</text>
+        <text x="112" y="98" text-anchor="middle" fill="rgba(240,244,255,0.45)" font-size="10" font-family="DM Sans,sans-serif">Conținut</text>
+        <text x="288" y="82" text-anchor="middle" fill="#f0f4ff" font-size="14" font-weight="700" font-family="DM Sans,sans-serif">PK</text>
+        <text x="288" y="98" text-anchor="middle" fill="rgba(240,244,255,0.45)" font-size="10" font-family="DM Sans,sans-serif">Pedagogie</text>
+        <text x="200" y="278" text-anchor="middle" fill="#f0f4ff" font-size="14" font-weight="700" font-family="DM Sans,sans-serif">TK</text>
+        <text x="200" y="294" text-anchor="middle" fill="rgba(240,244,255,0.45)" font-size="10" font-family="DM Sans,sans-serif">Tehnologie</text>
+        <text x="200" y="112" text-anchor="middle" fill="rgba(240,244,255,0.6)" font-size="10" font-weight="600" font-family="DM Sans,sans-serif">PCK</text>
+        <text x="148" y="198" text-anchor="middle" fill="rgba(240,244,255,0.6)" font-size="10" font-weight="600" font-family="DM Sans,sans-serif">TCK</text>
+        <text x="252" y="198" text-anchor="middle" fill="rgba(240,244,255,0.6)" font-size="10" font-weight="600" font-family="DM Sans,sans-serif">TPK</text>
+        <circle cx="200" cy="162" r="30" fill="rgba(201,168,76,0.2)" stroke="rgba(201,168,76,0.65)" stroke-width="1.5"/>
+        <text x="200" y="158" text-anchor="middle" fill="#c9a84c" font-size="12" font-weight="700" font-family="DM Sans,sans-serif">TPACK</text>
+        <text x="200" y="172" text-anchor="middle" fill="rgba(201,168,76,0.65)" font-size="9" font-family="DM Sans,sans-serif">intersecția</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ADDIE -->
+  <div class="schema-card">
+    <p class="schema-title">Branch · 2009</p>
+    <p class="schema-name">Ciclul ADDIE</p>
+    <div class="svg-wrap">
+      <svg viewBox="0 0 360 290" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;">
+        <defs>
+          <marker id="arh" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="rgba(201,168,76,0.55)"/>
+          </marker>
+        </defs>
+        <!-- Arcs between nodes -->
+        <path d="M 207,46 Q 274,72 272,108" fill="none" stroke="rgba(201,168,76,0.35)" stroke-width="1.5" marker-end="url(#arh)"/>
+        <path d="M 275,140 Q 278,196 256,218" fill="none" stroke="rgba(201,168,76,0.35)" stroke-width="1.5" marker-end="url(#arh)"/>
+        <path d="M 226,236 Q 180,252 134,236" fill="none" stroke="rgba(201,168,76,0.35)" stroke-width="1.5" marker-end="url(#arh)"/>
+        <path d="M 104,218 Q 82,196 85,140" fill="none" stroke="rgba(201,168,76,0.35)" stroke-width="1.5" marker-end="url(#arh)"/>
+        <path d="M 88,108 Q 90,62 153,46" fill="none" stroke="rgba(201,168,76,0.35)" stroke-width="1.5" marker-end="url(#arh)"/>
+        <!-- Nodes -->
+        <circle cx="180" cy="36" r="30" fill="rgba(201,168,76,0.14)" stroke="rgba(201,168,76,0.55)" stroke-width="1.5"/>
+        <text x="180" y="32" text-anchor="middle" fill="#c9a84c" font-size="17" font-weight="700" font-family="Cormorant Garamond,serif">A</text>
+        <text x="180" y="46" text-anchor="middle" fill="rgba(201,168,76,0.65)" font-size="9" font-family="DM Sans,sans-serif">Analiză</text>
+        <circle cx="274" cy="124" r="30" fill="rgba(13,33,69,0.85)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+        <text x="274" y="120" text-anchor="middle" fill="#f0f4ff" font-size="17" font-weight="700" font-family="Cormorant Garamond,serif">D</text>
+        <text x="274" y="134" text-anchor="middle" fill="rgba(240,244,255,0.45)" font-size="9" font-family="DM Sans,sans-serif">Design</text>
+        <circle cx="244" cy="228" r="30" fill="rgba(13,33,69,0.85)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+        <text x="244" y="224" text-anchor="middle" fill="#f0f4ff" font-size="17" font-weight="700" font-family="Cormorant Garamond,serif">D</text>
+        <text x="244" y="238" text-anchor="middle" fill="rgba(240,244,255,0.45)" font-size="9" font-family="DM Sans,sans-serif">Dezvoltare</text>
+        <circle cx="116" cy="228" r="30" fill="rgba(13,33,69,0.85)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+        <text x="116" y="224" text-anchor="middle" fill="#f0f4ff" font-size="17" font-weight="700" font-family="Cormorant Garamond,serif">I</text>
+        <text x="116" y="238" text-anchor="middle" fill="rgba(240,244,255,0.45)" font-size="8" font-family="DM Sans,sans-serif">Implementare</text>
+        <circle cx="86" cy="124" r="30" fill="rgba(13,33,69,0.85)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+        <text x="86" y="120" text-anchor="middle" fill="#f0f4ff" font-size="17" font-weight="700" font-family="Cormorant Garamond,serif">E</text>
+        <text x="86" y="134" text-anchor="middle" fill="rgba(240,244,255,0.45)" font-size="9" font-family="DM Sans,sans-serif">Evaluare</text>
+        <text x="180" y="126" text-anchor="middle" fill="rgba(240,244,255,0.15)" font-size="10" font-family="DM Sans,sans-serif">Ciclu</text>
+        <text x="180" y="142" text-anchor="middle" fill="rgba(240,244,255,0.15)" font-size="10" font-family="DM Sans,sans-serif">iterativ</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- 6E.5 -->
+  <div class="schema-card">
+    <p class="schema-title">Ilie · 2020</p>
+    <p class="schema-name">Modelul 6E.5 — cele 6 elemente interdependente</p>
+    <div class="svg-wrap">
+      <svg viewBox="0 0 380 340" xmlns="http://www.w3.org/2000/svg" style="max-width:380px;width:100%;">
+        <!-- Spokes -->
+        <line x1="190" y1="170" x2="310" y2="170" stroke="rgba(201,168,76,0.18)" stroke-width="1.5"/>
+        <line x1="190" y1="170" x2="250" y2="66"  stroke="rgba(201,168,76,0.18)" stroke-width="1.5"/>
+        <line x1="190" y1="170" x2="130" y2="66"  stroke="rgba(201,168,76,0.18)" stroke-width="1.5"/>
+        <line x1="190" y1="170" x2="70"  y2="170" stroke="rgba(201,168,76,0.18)" stroke-width="1.5"/>
+        <line x1="190" y1="170" x2="130" y2="274" stroke="rgba(201,168,76,0.18)" stroke-width="1.5"/>
+        <line x1="190" y1="170" x2="250" y2="274" stroke="rgba(201,168,76,0.18)" stroke-width="1.5"/>
+        <!-- Center -->
+        <circle cx="190" cy="170" r="40" fill="rgba(201,168,76,0.13)" stroke="rgba(201,168,76,0.5)" stroke-width="1.5"/>
+        <text x="190" y="165" text-anchor="middle" fill="#c9a84c" font-size="11" font-weight="700" font-family="DM Sans,sans-serif">DESIGN</text>
+        <text x="190" y="180" text-anchor="middle" fill="rgba(201,168,76,0.6)" font-size="9" font-family="DM Sans,sans-serif">instruire</text>
+        <!-- E1 top-left -->
+        <circle cx="130" cy="66" r="32" fill="rgba(13,33,69,0.9)" stroke="rgba(255,255,255,0.13)" stroke-width="1.5"/>
+        <text x="130" y="58" text-anchor="middle" fill="#c9a84c" font-size="10" font-weight="700" font-family="DM Sans,sans-serif">E1</text>
+        <text x="130" y="71" text-anchor="middle" fill="rgba(240,244,255,0.6)" font-size="8.5" font-family="DM Sans,sans-serif">Analiza</text>
+        <text x="130" y="82" text-anchor="middle" fill="rgba(240,244,255,0.6)" font-size="8.5" font-family="DM Sans,sans-serif">situației</text>
+        <!-- E2 top-right -->
+        <circle cx="250" cy="66" r="32" fill="rgba(13,33,69,0.9)" stroke="rgba(255,255,255,0.13)" stroke-width="1.5"/>
+        <text x="250" y="58" text-anchor="middle" fill="#c9a84c" font-size="10" font-weight="700" font-family="DM Sans,sans-serif">E2</text>
+        <text x="250" y="72" text-anchor="middle" fill="rgba(240,244,255,0.6)" font-size="8.5" font-family="DM Sans,sans-serif">Conținut</text>
+        <!-- E3 bottom-left -->
+        <circle cx="130" cy="274" r="32" fill="rgba(13,33,69,0.9)" stroke="rgba(255,255,255,0.13)" stroke-width="1.5"/>
+        <text x="130" y="266" text-anchor="middle" fill="#c9a84c" font-size="10" font-weight="700" font-family="DM Sans,sans-serif">E3</text>
+        <text x="130" y="279" text-anchor="middle" fill="rgba(240,244,255,0.6)" font-size="8.5" font-family="DM Sans,sans-serif">Mod de</text>
+        <text x="130" y="290" text-anchor="middle" fill="rgba(240,244,255,0.6)" font-size="8.5" font-family="DM Sans,sans-serif">evaluare</text>
+        <!-- E4 right -->
+        <circle cx="310" cy="170" r="32" fill="rgba(13,33,69,0.9)" stroke="rgba(255,255,255,0.13)" stroke-width="1.5"/>
+        <text x="310" y="165" text-anchor="middle" fill="#c9a84c" font-size="10" font-weight="700" font-family="DM Sans,sans-serif">E4</text>
+        <text x="310" y="178" text-anchor="middle" fill="rgba(240,244,255,0.6)" font-size="8.5" font-family="DM Sans,sans-serif">Finalități</text>
+        <!-- E5 bottom-right -->
+        <circle cx="250" cy="274" r="32" fill="rgba(13,33,69,0.9)" stroke="rgba(255,255,255,0.13)" stroke-width="1.5"/>
+        <text x="250" y="266" text-anchor="middle" fill="#c9a84c" font-size="10" font-weight="700" font-family="DM Sans,sans-serif">E5</text>
+        <text x="250" y="279" text-anchor="middle" fill="rgba(240,244,255,0.6)" font-size="8.5" font-family="DM Sans,sans-serif">Mod de</text>
+        <text x="250" y="290" text-anchor="middle" fill="rgba(240,244,255,0.6)" font-size="8.5" font-family="DM Sans,sans-serif">predare</text>
+        <!-- E6 left -->
+        <circle cx="70" cy="170" r="32" fill="rgba(13,33,69,0.9)" stroke="rgba(255,255,255,0.13)" stroke-width="1.5"/>
+        <text x="70" y="165" text-anchor="middle" fill="#c9a84c" font-size="10" font-weight="700" font-family="DM Sans,sans-serif">E6</text>
+        <text x="70" y="178" text-anchor="middle" fill="rgba(240,244,255,0.6)" font-size="8.5" font-family="DM Sans,sans-serif">Timp</text>
+      </svg>
+    </div>
+    <div class="e6-legend">
+      <div class="e6-item"><span>E1</span> — Analiza situației educaționale</div>
+      <div class="e6-item"><span>E2</span> — Conținutul</div>
+      <div class="e6-item"><span>E3</span> — Mod de evaluare</div>
+      <div class="e6-item"><span>E4</span> — Finalități</div>
+      <div class="e6-item"><span>E5</span> — Mod de predare</div>
+      <div class="e6-item"><span>E6</span> — Timp</div>
+    </div>
+  </div>
+
+  <button class="teorie-cta" onclick="startAtelier()">
+    <i data-feather="play" width="16" height="16"></i>
+    Intră în atelier
+  </button>
+
+</div>
+      
     </div><!-- /teorie-body -->
   </div><!-- /teorie-scroll -->
 </div>
@@ -1422,7 +1697,7 @@ function showScreen(id) {
 }
 
 function switchTeorieTab(tab, btn) {
-  ['modele','context','faq'].forEach(t => {
+  ['modele','context','faq','scheme'].forEach(t => {
     document.getElementById('tab-' + t).hidden = (t !== tab);
   });
   document.querySelectorAll('.teorie-tab').forEach(b => b.classList.remove('active'));
